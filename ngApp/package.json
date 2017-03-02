@@ -1,0 +1,11 @@
+{
+  "name": "sa-ng-interview",
+  "version": "1.0.0",
+  "description": "An angular interview test for Senior Advisor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gregory Starr",
+  "license": "ISC"
+}
