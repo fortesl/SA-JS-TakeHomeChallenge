@@ -21,7 +21,7 @@
   </head>
   <body>
 
-    <div class="container" ng-controller="MainController as main">
+    <div class="container" ng-controller="MainController as main" ng-cloak>
       <nav class="sa-menu sa-menu-nav">
         <ul ng-repeat="item in main.propertyData">
           <li ng-click="main.showProperty(item)"><a href="#">{{item.title}}</a></li>
@@ -29,7 +29,7 @@
       </nav>
       <main class="sa-main">
           <p>{{main.selectedProperty.title}}</p>
-          <img src="{{main.selectedProperty.image}}">
+          <img class="sa-building-image" src="{{main.selectedProperty.image}}">
           <p>{{main.selectedProperty.description}}</p>
       </main>
     </div>

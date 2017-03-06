@@ -11,6 +11,7 @@
     vm.title = "Sa Take Home Challenge";
     vm.subTitle = "Build something great for us :-)";
     vm.propertyData = [];
+    vm.selectedProperty = { title:"", image:"", description:""};
 
     //get data
     var init = function() {
