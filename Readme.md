@@ -6,7 +6,7 @@ Pick the framework you would like to apply to the challenge by selecting the app
 
 Rules:
  * No Cheating -  outside help, just you and your computer
- * No additional frameworks (No... no bootstrap) other than those included by use in the git projects (unless they are specifically only for the purposes of unit testing)
+ * No additional UI frameworks (No... no bootstrap) other than those included by use in the git projects
  * No generators
 
 
@@ -19,6 +19,8 @@ Bonus Points include
  * Uncluding meaningful unit testing
  * Proper documentation
  * Strong demonostration of architecture and css best practices
+ * Promises (You may include a promise lib of your choice)
+ * Proper State management (You may include Redux, mBox, etc)
 
 After pulling down the project for the first time, download npm dependencies:
 * There will be a readme file to guide to the appropriate next steps.
