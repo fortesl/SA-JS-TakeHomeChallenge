@@ -13,8 +13,6 @@
 (function() {
   'use strict';
 
-  var debug = true;
-
   angular
     .module('ngApp')
     .controller('MainController', ['DataService', MainController]);
@@ -24,19 +22,18 @@
     var vm = this;
     vm.title = "Sa Take Home Challenge";
     vm.subTitle = "Build something great for us :-)";
-    vm.data = [];
+    vm.propertyData = [];
 
     //get data
     var init = function() {
       DataService.get().then(function(response) {
-        var property = response.data.property;
-        for (var i=0; i<7; i++) {
-          vm.data.push(property);
-        }
-        if (debug) {
-          console.log(vm.data);
-        }
+        vm.propertyData = response.data;
+        vm.selectedProperty = vm.propertyData[0];
       });
+    };
+
+    self.showProperty = function(property) {
+      selectedProperty = property;
     };
 
     init();

@@ -33,6 +33,47 @@ p{
     color: #cf7131;
 }
 
+.sa-main {
+    width: 60%;
+    float: left; 
+    padding: 15px;
+    margin-left: 20px;
+}
+
+.sa-menu {
+    width: 40%;
+    float: left;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 1px 5px 5px grey;
+    padding-bottom: 400px;
+}
+
+.sa-menu-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+.sa-menu-nav li a {
+    display: block;
+    text-decoration: none;
+    color: teal;
+}
+
+.sa-menu-nav li a{
+    padding: 8px 16px;
+}
+
+.sa-menu-nav li a:hover {
+    color: white;
+    background-color: teal;
+}
+
 
 
 /* Do not remove the comments below. It's the markers used by gulp-inject to inject
