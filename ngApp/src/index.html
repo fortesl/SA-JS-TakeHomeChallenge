@@ -24,7 +24,7 @@
     <div class="container" ng-controller="MainController as main">
       <nav class="sa-menu sa-menu-nav">
         <ul ng-repeat="item in main.propertyData">
-          <li ng-click="main.showProperty"><a href="#">{{item.title}}</a></li>
+          <li ng-click="main.showProperty(item)"><a href="#">{{item.title}}</a></li>
         </ul>
       </nav>
       <main class="sa-main">

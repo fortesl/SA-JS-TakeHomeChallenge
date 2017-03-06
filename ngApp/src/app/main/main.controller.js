@@ -32,8 +32,8 @@
       });
     };
 
-    self.showProperty = function(property) {
-      selectedProperty = property;
+    vm.showProperty = function(property) {
+      vm.selectedProperty = property;
     };
 
     init();
