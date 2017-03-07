@@ -5,6 +5,10 @@
     <title>ngApp</title>
     <meta name="description" content="Senior Advisor Take Home Challenge">
     <meta name="viewport" content="width=device-width">
+
+    <!-- Not able to compile sass. using raw css -->
+    <link rel="stylesheet" href="rawcss.css" type="text/css">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -19,19 +23,29 @@
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body>
+  <body background="app/assets/images/appBkg.png">
 
-    <div class="container" ng-controller="MainController as main" ng-cloak>
-      <nav class="sa-menu sa-menu-nav">
-        <ul ng-repeat="item in main.propertyData">
-          <li ng-click="main.showProperty(item)"><a href="#">{{item.title}}</a></li>
-        </ul>
-      </nav>
-      <main class="sa-main">
-          <p>{{main.selectedProperty.title}}</p>
-          <img class="sa-building-image" src="{{main.selectedProperty.image}}">
-          <p>{{main.selectedProperty.description}}</p>
-      </main>
+    <div class="container" ng-controller="MainController as main">
+      <div class="sa-menu sa-menu-nav">
+        <div class="sa-menu-nav">
+          <button class="sa-button" ng-repeat="item in main.propertyData" 
+              ng-class="{active: (item===main.selectedProperty)}"
+              ng-click="main.showProperty(item)">
+            {{item.title}}
+          </button>        
+        </div>
+      </div>
+
+      <div class="sa-main" ng-cloak> 
+          <figure class="sa-building-image">
+            <div class="sa-title">{{main.selectedProperty.title}}</div>
+             <img src="{{main.selectedProperty.image}}">
+             <figcaption class="desc">{{main.selectedProperty.description}}</figcaption>
+            <div class="sa-more-info">
+              <a href="">More Information</a>
+            </div>
+          </figure>
+      </div>
     </div>
 
 
