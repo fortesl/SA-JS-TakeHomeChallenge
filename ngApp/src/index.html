@@ -26,27 +26,9 @@
   <body background="app/assets/images/appBkg.png">
 
     <div class="container" ng-controller="MainController as main">
-      <div class="sa-menu sa-menu-nav">
-        <div class="sa-menu-nav">
-          <button class="sa-button" ng-repeat="item in main.propertyData" 
-              ng-class="{active: (item===main.selectedProperty)}"
-              ng-click="main.showProperty(item)">
-            {{item.title}}
-          </button>        
-        </div>
-      </div>
 
-      <div class="sa-main" ng-cloak> 
-          <figure class="sa-building-image">
-            <div class="sa-title">{{main.selectedProperty.title}}</div>
-             <img src="{{main.selectedProperty.image}}">
-             <figcaption class="desc">{{main.selectedProperty.description}}</figcaption>
-            <div class="sa-more-info">
-              <a href="">More Information</a>
-            </div>
-          </figure>
-      </div>
-      
+      <sa-properties></sa-properties>
+
     </div>
 
 
